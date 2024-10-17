@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    int num = 0;
+    try{
+        if (num > 0){
+            throw 'c';
+        }
+        else if (num < 0){
+            throw num;
+        }
+        else {
+            throw 1.1f; //float
+        }
+    }
+    catch(char ch) {
+        cout << "Caught character exception" << endl;
+    }
+    catch(int number){
+        cout << "Caught integer exception" << endl;
+    }
+    catch(float f){
+        cout << "Caught a float exception" << endl;
+    }
+    return 0;
+}
